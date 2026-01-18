@@ -4,7 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Town Limo - Atlanta's Premier Chauffeur</title>
+    <title>A Town Limo | Atlanta's Premier Luxury Chauffeur Service</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Experience the gold standard of luxury transportation in Atlanta. Executive sedans, SUVs, and Sprinters for airport transfers and events.">
+    <meta name="keywords" content="Atlanta Limo, Luxury Chauffeur, Airport Transfer Atlanta, Executive Car Service">
+    
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="A Town Limo - Atlanta Luxury Chauffeur">
+    <meta property="og:description" content="Professional airport transfers and executive transportation. Experience unrivaled comfort.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1200&auto=format&fit=crop">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +24,7 @@
         body {
             font-family: 'Inter', sans-serif;
             background-color: #050505;
+            color: white;
         }
         h1, h2, h3, .luxury-font {
             font-family: 'Playfair Display', serif;
@@ -29,12 +41,38 @@
         }
         .gold-button {
             background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-        .gold-button:hover {
+        .gold-button:hover:not(:disabled) {
             filter: brightness(1.1);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(184, 134, 11, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(184, 134, 11, 0.4);
+        }
+        .gold-button:active:not(:disabled) {
+            transform: translateY(-1px);
+        }
+        
+        /* Custom scrollbar for premium feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050505;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #222;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d4af37;
+        }
+
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.98); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .animate-fade-scale {
+            animation: fadeInScale 0.8s ease-out forwards;
         }
     </style>
 <script type="importmap">
